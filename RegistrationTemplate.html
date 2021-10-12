@@ -1,0 +1,131 @@
+
+<html>
+
+<head>
+	<title>Welcome Page</title>
+</head>
+<script>
+	function showSearchText()
+	{
+
+
+		var form = document.getElementById("form");
+		var text = document.getElementById("search-feature-text");
+		form.classList.remove("show");
+		form.classList.add("hide");
+
+	}
+
+	
+
+</script>
+<style>
+
+.show {
+	display: inline !important;
+}
+
+.hide {
+	display: none !important;
+}
+
+</style>
+<body bgcolor="khaki">
+
+	<br><br><br><br><br>
+	<center>
+		<font face="arial black" size="4">
+			Student Registration System<br>
+			IFT 458 SPRING 2018</font><br>
+		<br>
+		<hr size="4" color="blue" />
+		<br><br>
+		<table border="1" width="800" height="300">
+			<tr>
+				<th align="center" colspan="3"> Student Regisration Form </th>
+			</tr>
+			<tr height="150">
+				<td width="20%"><button onClick="showSearchText()">Search</button></td>
+
+
+				<td widht="60%">
+
+					<form class="show" id="form">
+						<table>
+							<tr>
+								<td>Student Id</td>
+								<td><input id="studentIdInput" type="text" placeholder="required" /></td>
+							</tr>
+
+							<tr>
+								<td>Student Name</td>
+								<td><input id="studentNameInput" type="text" placeholder="required" /></td>
+							</tr>
+
+							<tr>
+								<td>Student DOB</td>
+								<td><input id="studentDOBInput"  type="datetime" placeholder="required" /></td>
+							</tr>
+
+							<tr>
+								<td>Student Age</td>
+								<td>
+									<input id="studentAgeInput" type="number" placeholder="required" />
+								</td>
+							</tr>
+
+							<tr>
+								<td>Program</td>
+								<td>
+									<select name="Program" id="studentProgramInput" >
+										<option value="IFT">IFT</option>
+										<option value="EGR">EGR</option>
+										<option value="SER">SER</option>
+										<option value="CSE">CSE</option>
+										<option value="GIT">GIT</option>
+									</select></td>
+							</tr>
+
+							<tr>
+								<td>Campus</td>
+								<td>
+									<select name="campus" size="4" multiple id="studentCampusInput">
+										<option value="Poly">Poly</option>
+										<option value="Main">Main</option>
+										<option value="West">West</option>
+										<option value="Downtown">Downtown</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Hold down the Ctrl (windows) / Command (Mac) button to select multiple options.</p>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="center"><input style="font-face :'Comic Sans MS';font-size:larger;height: 30px; width:90px;background-color: yellow;color:red;" type="button" value="Login" onclick="formSubmit()" /></td>
+							</tr>
+						</table>
+					</form>
+					<p class="hide" id="search-feature-text">This is a search feature...</p>
+				</td>
+				<td widht="20%" colspan="2"></td>
+			</tr>
+			<tr>
+					<tr class="hide" id="studentIdOutputRow"><td>Student Id</td><td id="studentIdOutput"></td></tr>
+					<tr class="hide" id="studentNameOutputRow"><td>Student Name</td><td id="studentNameOutput"></td></tr>
+					<tr class="hide" id="studentDOBOutputRow"><td>Student DOB</td><td id="studentDOBOutput"></td></tr>
+					<tr class="hide" id="studentAgeOutputRow"><td>Student Age</td><td id="studentAgeOutput"></td></tr>
+					<tr class="hide" id="studentProgramOutputRow"><td>Program</td><td id="studentProgramOutput"></td></tr>
+					<tr class="hide" id="studentCampusOutputRow"><td>Campus</td><td id="studentCampusOutput"></td></tr>
+				</td>
+
+			</tr>
+
+		</table>
+		<br><br><br>
+		<hr size="4" color="blue" />
+	</center>
+</body>
+
+</html>
